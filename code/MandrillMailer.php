@@ -330,8 +330,8 @@ class MandrillMailer extends Mailer
             $fromEmail = $from['email'];
             $fromName  = $from['name'];
         } else if (strpos($from, '<') !== false) {
-            $fromEmail = self::get_displayname_from_rfc_email($from);
-            $fromName  = self::get_email_from_rfc_email($from);
+            $fromEmail = self::get_email_from_rfc_email($from);
+            $fromName  = self::get_displayname_from_rfc_email($from);
         } else {
             $fromEmail = $from;
             $fromName  = null;
